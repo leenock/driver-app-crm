@@ -60,15 +60,15 @@ const Hero = () => {
 
     return (
         <section className="section hero has-bg-image" aria-label="home" 
-          style={{ backgroundImage: "url('./assets/images/hero-bg.jpg')" }}>
+          style={{ backgroundColor: "firebrick" }}>
             <div className="container">
                 <div className="hero-content">
-                    <h1 className="h1 hero-title">Crafting project specific solutions with expertise.</h1>
+                    <h1 className="h1 hero-title">Make money driving with Dereva wangu in Kenya.</h1>
                     <p className="hero-text">
-                        We’re a creative company that focuses on establishing long-term relationships with customers.
+                    Become a dereva wangu driver, set your schedule and earn money by driving!
                     </p>
                     <div className="btn-wrapper">
-                        <a href="/#" className="btn btn-primary">Explore Now</a>
+                        <a href="/#" className="btn btn-primary">Sign up Now</a>
                         <a href="/#" className="btn btn-outline">Contact Us</a>
                     </div>
                 </div>
@@ -77,24 +77,20 @@ const Hero = () => {
                         <ul className="slider-container" data-slider-container>
                             <li className="slider-item">
                             <figure className="img-holder" style={{ "--width": 575, "--height": 550 }}>
-                                    <img src="./assets/images/hero-slide-1.jpg" style={{ "--width": 575, "--height": 550 }} alt="" className="img-cover" />
+                                    <img src="./assets/images/MicrosoftTeams-image-54.png" style={{ "--width": 575, "--height": 550 }} alt="" className="img-cover" />
                                 </figure>
                             </li>
                             <li className="slider-item">
                                 <div className="hero-card">
                                     <figure className="img-holder" style={{ "--width": 575, "--height": 550 }}>
-                                        <img src="./assets/images/hero-slide-2.jpg" width="575" height="550" alt="hero banner"
+                                        <img src="./assets/images/hero2.jpg" width="575" height="550" alt="hero banner"
                                             className="img-cover" />
                                     </figure>
-
-                                    <button className="play-btn" aria-label="play adex intro">
-                                        <ion-icon name="play" aria-hidden="true"></ion-icon>
-                                    </button>
                                 </div>
                             </li>
                             <li className="slider-item">
                                 <figure className="img-holder" style={{ "--width": 575, "--height": 550 }}>
-                                    <img src="./assets/images/hero-slide-3.jpg" width="575" height="550" alt="" className="img-cover" />
+                                    <img src="./assets/images/hero3.jpg" width="575" height="550" alt="" className="img-cover" />
                                 </figure>
                             </li>
                         </ul>

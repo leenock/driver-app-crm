@@ -190,7 +190,7 @@
      */
   
     .hero {
-      padding-block-start: calc(var(--section-padding) + 50px);
+      padding-block-start: calc(var(--section-padding) + 10px);
       text-align: left;
     }
   

@@ -35,13 +35,7 @@ const Header = () => {
     <header className="header" data-header>
       <div className="container" >
         <a href="/#" className="logo">
-          <img
-            src="./assets/images/light.png"
-            width="74"
-            height="24"
-            alt="Adexhome"
-            className="logo-light"
-          />
+        <p style={{ color: "white", fontWeight: "bold", fontSize: "19px" }}>Dereva wangu</p>
           <img
             src="./assets/images/dark.png"
             width="74"
@@ -75,29 +69,25 @@ const Header = () => {
           <ul className="navbar-list" onClick={closeMenu}>
             <li>
               <a href="/#" className="navbar-link">
-                Home
+                Overview
               </a>
             </li>
             <li>
               <a href="/#" className="navbar-link">
-                About
+                How it works
               </a>
             </li>
             <li>
               <a href="/#" className="navbar-link">
-                Projects
+                FAQs
               </a>
             </li>
             <li>
               <a href="/#" className="navbar-link">
-                Blog
+                Login
               </a>
             </li>
-            <li>
-              <a href="/#" className="navbar-link">
-                Contact
-              </a>
-            </li>
+           
           </ul>
           <div className="wrapper">
             <a href="mailto:info@email.com" className="contact-link">
@@ -136,7 +126,7 @@ const Header = () => {
           </ul>
         </nav>
         <a href="/#" className="btn btn-primary">
-          Free Trial
+          Apply to Drive
         </a>
         <button
           className={`nav-open-btn ${navActive ? "active" : ""}`}
