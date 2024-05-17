@@ -1,4 +1,4 @@
-.cta { background-color: #b22222; }
+.cta { background-color: var(--cultured); }
 
 .cta .container {
   padding-block: 100px 60px;
@@ -6,12 +6,12 @@
 }
 
 .cta .section-title {
-  color: var(--white);
+  color: #1f1f1f;
   margin-block-end: 30px;
 }
 
 .cta .btn {
-  background-color: white;
-  color:black;
+  background-color: #000;
+  color:#fff;
   border: none;
 }

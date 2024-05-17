@@ -1,13 +1,5 @@
-import React, { useState } from "react";
 import "./faqs.css";
-
-const Faqs = ({ title, content }) => {
-  const [expanded, setExpanded] = useState(false);
-
-  const expandAccordion = () => {
-    setExpanded(!expanded);
-  };
-
+const Faqs = () => {
   return (
     <section className="about" aria-labelledby="about-label">
       <div className="container">
@@ -30,37 +22,7 @@ const Faqs = ({ title, content }) => {
           <h2 className="h2 section-title">
           Frequently asked questions
           </h2>
-
           <ul>
-            <li className="about-item">
-              <div
-                className={`accordion-card ${expanded ? "expanded" : ""}`}
-                data-accordion
-              >
-                <h3 className="card-title">
-                  <button
-                    className="accordion-btn"
-                    data-accordion-btn
-                    onClick={expandAccordion}
-                  >
-                    <ion-icon
-                      name={`chevron-${expanded ? "down" : "down"}-outline`}
-                      aria-hidden="true"
-                      className={expanded ? "up" : "up"}
-                    ></ion-icon>
-                    <span className="span h5">Professional Design</span>
-                  </button>
-                </h3>
-                {expanded && (
-                  <p className="accordion-content">
-                    Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                    condimentum nibh, ut fermentum massa justo sit amet risus.
-                    Cras mattis consectetur purus sit amet fermentum. Praesent
-                    commodo cursus magna, vel.
-                  </p>
-                )}
-              </div>
-            </li>
             <li className="about-item">
               <div className="accordion-card" data-accordion>
                 <h3 className="card-title">
