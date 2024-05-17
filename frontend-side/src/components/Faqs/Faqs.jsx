@@ -11,22 +11,28 @@ const Faqs = () => {
   const faqs = [
     {
       id: 1,
-      title: "Question 1",
+      title: "Where can I drive within my city?",
       content: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel."
     },
     {
       id: 2,
-      title: "Question 2",
+      title: "How do I sign up to become a driver?",
       content: "Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
     },
     {
       id: 3,
-      title: "Question 3",
+      title: "What are the requirements to become a driver?",
       content: "Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
     },
     {
       id: 4,
-      title: "Question 4",
+      title: "Are there any bonuses or incentives for drivers?",
+      content: "Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+    }
+    ,
+    {
+      id: 5,
+      title: "What are the safety measures for drivers?",
       content: "Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
     }
     // Add more FAQs here
