@@ -60,7 +60,7 @@ const Hero = () => {
 
     return (
         <section className="section hero has-bg-image" aria-label="home" 
-          style={{ backgroundColor: "firebrick" }}>
+          style={{ backgroundColor: "darkgoldenrod" }}>
             <div className="container">
                 <div className="hero-content">
                     <h1 className="h1 hero-title">Make money driving with Dereva wangu in Kenya.</h1>

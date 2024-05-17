@@ -1,7 +1,7 @@
 .footer {
-    background-color: #b22222;
+    background-color: darkgoldenrod;
     padding-block: 60px 100px;
-    color: var(--light-gray);
+    color: #fff;
   }
   
   .footer-brand .footer-text { margin-block: 20px; }
