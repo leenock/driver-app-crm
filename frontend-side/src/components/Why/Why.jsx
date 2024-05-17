@@ -14,9 +14,9 @@ const Why = () => {
               <div className="card-icon">
                 <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
               </div>
-              <h3 className="h4 card-title">Network</h3>
+              <h3 className="h4 card-title">Flexible Working Hours</h3>
               <p className="card-text">
-               meet high end clients (VVIPs) and build your own business
+              Enjoy the freedom to work whenever it suits your schedule. Whether you prefer driving early mornings, late nights, or just a few hours during the day, you can choose the hours that best fit your lifestyle.
               </p>
             </div>
           </li>
@@ -28,9 +28,9 @@ const Why = () => {
                   aria-hidden="true"
                 ></ion-icon>
               </div>
-              <h3 className="h4 card-title">Drive and earn when you like</h3>
+              <h3 className="h4 card-title">Competitive Earnings</h3>
               <p className="card-text">
-              Better Days planning
+              Earn competitive rates per ride, allowing you to make a substantial income. With our transparent payment system, you’ll always know how much you’re earning and can track your progress easily.
               </p>
             </div>
           </li>
@@ -42,9 +42,9 @@ const Why = () => {
                   aria-hidden="true"
                 ></ion-icon>
               </div>
-              <h3 className="h4 card-title">A reliable source of income</h3>
+              <h3 className="h4 card-title">Incentives and Bonuses</h3>
               <p className="card-text">
-              No related vehicle expenses
+              Boost your earnings with various incentive programs and bonuses. From peak hour bonuses to referral rewards, there are multiple ways to increase your income beyond regular fares.
               </p>
             </div>
           </li>
@@ -56,9 +56,9 @@ const Why = () => {
                   aria-hidden="true"
                 ></ion-icon>
               </div>
-              <h3 className="h4 card-title">Market Research</h3>
+              <h3 className="h4 card-title">User-Friendly App</h3>
               <p className="card-text">
-              A professional work environment
+              Manage your rides effortlessly with our user-friendly app. The app is designed to be intuitive and easy to navigate, making your driving experience as smooth as possible.
               </p>
             </div>
           </li>

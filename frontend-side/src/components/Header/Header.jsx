@@ -43,6 +43,7 @@ const Header = () => {
             alt="Adexhome"
             className="logo-dark"
           />
+          
         </a>
         <nav
           className={`navbar ${navActive ? "active" : "navbar.active"}`}
@@ -50,12 +51,8 @@ const Header = () => {
         >
           <div className="navbar-top">
             <a href="/#" className="logo">
-              <img
-                src="./assets/images/light.png"
-                width="74"
-                height="24"
-                alt="Adex home"
-              />
+            <p style={{ color: "white", fontWeight: "bold", fontSize: "19px" }}>Dereva wangu</p>
+
             </a>
             <button
               onClick={closeMenu}
