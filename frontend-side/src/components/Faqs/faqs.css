@@ -38,5 +38,11 @@
     max-height: max-content;
     padding-block-end: 20px;
   }
-  
+  p.accordion-content {
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    cursor: pointer;
+
+  }
   

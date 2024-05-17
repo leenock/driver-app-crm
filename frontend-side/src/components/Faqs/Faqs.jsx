@@ -1,5 +1,37 @@
+import React, { useState } from "react";
 import "./faqs.css";
+
 const Faqs = () => {
+  const [expandedId, setExpandedId] = useState(null);
+
+  const toggleAccordion = (id) => {
+    setExpandedId(expandedId === id ? null : id);
+  };
+
+  const faqs = [
+    {
+      id: 1,
+      title: "Question 1",
+      content: "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum. Praesent commodo cursus magna, vel."
+    },
+    {
+      id: 2,
+      title: "Question 2",
+      content: "Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+    },
+    {
+      id: 3,
+      title: "Question 3",
+      content: "Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+    },
+    {
+      id: 4,
+      title: "Question 4",
+      content: "Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+    }
+    // Add more FAQs here
+  ];
+
   return (
     <section className="about" aria-labelledby="about-label">
       <div className="container">
@@ -16,58 +48,42 @@ const Faqs = () => {
 
         <div className="about-content">
           <p className="section-subtitle" id="about-label">
-           FAQS?
+            FAQS?
           </p>
 
           <h2 className="h2 section-title">
-          Frequently asked questions
+            Frequently asked questions
           </h2>
+
           <ul>
-            <li className="about-item">
-              <div className="accordion-card" data-accordion>
-                <h3 className="card-title">
-                  <button className="accordion-btn" data-accordion-btn>
-                    <ion-icon
-                      name="chevron-down-outline"
-                      aria-hidden="true"
-                      className="down"
-                    ></ion-icon>
-
-                    <span className="span h5">Top-Notch Support</span>
-                  </button>
-                </h3>
-
-                <p className="accordion-content">
-                  Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                  condimentum nibh, ut fermentum massa justo sit amet risus.
-                  Cras mattis consectetur purus sit amet fermentum. Praesent
-                  commodo cursus magna, vel.
-                </p>
-              </div>
-            </li>
-
-            <li className="about-item">
-              <div className="accordion-card" data-accordion>
-                <h3 className="card-title">
-                  <button className="accordion-btn" data-accordion-btn>
-                    <ion-icon
-                      name="chevron-down-outline"
-                      aria-hidden="true"
-                      className="down"
-                    ></ion-icon>
-
-                    <spna className="span h5">Exclusive Assets</spna>
-                  </button>
-                </h3>
-
-                <p className="accordion-content">
-                  Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                  condimentum nibh, ut fermentum massa justo sit amet risus.
-                  Cras mattis consectetur purus sit amet fermentum. Praesent
-                  commodo cursus magna, vel.
-                </p>
-              </div>
-            </li>
+            {faqs.map((faq) => (
+              <li className="about-item" key={faq.id}>
+                <div
+                  className={`accordion-card ${expandedId === faq.id ? "expanded" : ""}`}
+                  data-accordion
+                >
+                  <h3 className="card-title">
+                    <button
+                      className="accordion-btn"
+                      data-accordion-btn
+                      onClick={() => toggleAccordion(faq.id)}
+                    >
+                      <ion-icon
+                        name={`chevron-${expandedId === faq.id ? "down" : "down"}-outline`}
+                        aria-hidden="true"
+                        className={expandedId === faq.id ? "up" : "up"}
+                      ></ion-icon>
+                      <span className="span h5">{faq.title}</span>
+                    </button>
+                  </h3>
+                  {expandedId === faq.id && (
+                    <p className="accordion-content">
+                      {faq.content}
+                    </p>
+                  )}
+                </div>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
