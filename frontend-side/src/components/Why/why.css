@@ -1,8 +1,14 @@
-.h2 .section-title {color: red;}
+.h2 .section-title {
+  color: red;
+}
 
-.service { text-align: center; }
+.service {
+  text-align: center;
+}
 
-.service .section-title { margin-block-end: 50px; }
+.service .section-title {
+  margin-block-end: 50px;
+}
 
 .service-card {
   padding: 20px;
@@ -22,9 +28,13 @@
   margin-inline: auto;
 }
 
-.service-card .card-icon ion-icon { --ionicon-stroke-width: 50px; }
+.service-card .card-icon ion-icon {
+  --ionicon-stroke-width: 50px;
+}
 
-.service-card .card-title { margin-block: 16px 10px; }
+.service-card .card-title {
+  margin-block: 16px 10px;
+}
 
 .service-card .btn-text {
   display: flex;
@@ -37,4 +47,6 @@
   transition: var(--transition-1);
 }
 
-.service-card .btn-text:is(:hover, :focus-visible) { opacity: 0.9; }
+.service-card .btn-text:is(:hover, :focus-visible) {
+  opacity: 0.9;
+}

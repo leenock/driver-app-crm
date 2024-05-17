@@ -3,7 +3,7 @@ import "./hiw.css";
 
 const Hiw = () => {
   return (
-    <section className="section feature" aria-labelledby="feature-label">
+    <section id="hiw" className="section feature" aria-labelledby="feature-label">
   <div className="container">
     <figure className="feature-banner">
       <img

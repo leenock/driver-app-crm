@@ -70,7 +70,7 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="/#" className="navbar-link">
+              <a href="#hiw" className="navbar-link">
                 How it works
               </a>
             </li>
