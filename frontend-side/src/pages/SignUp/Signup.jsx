@@ -1,71 +1,63 @@
-import React from 'react'
+import React from "react";
 import "./signup.css";
 
 const Signup = () => {
   return (
-    <section id="hiw" className="section feature" aria-labelledby="feature-label">
-    <div className="container">
-      <figure className="feature-banner">
-        <img
-          src="./assets/images/hiw.jpg"
-          width="800"
-          height="531"
-          loading="lazy"
-          alt="feature banner"
-          className="w-100"
-        />
-      </figure>
-      <div className="feature-content">
-        <p className="section-subtitle" id="feautre-label">
-          How it works
-        </p>
-        <h2 className="h2 section-title">
-        How the Driver Wangu platform  works
-        </h2>
-  
-        <p className="section-text">
-        Reliable and easy to use, with everything you need to drive and earn when you want.
-        </p>
-        <ul className="feature-list">
-          <li>
-            <div className="feature-card">
-              <div className="card-icon">
-                <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
-              </div>
-              <span className="span">Aenean quam ornare. Curabitur blandit.</span>
-            </div>
-          </li>
-          <li>
-            <div className="feature-card">
-              <div className="card-icon">
-                <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
-              </div>
-  
-              <span className="span">Nullam quis risus eget urna mollis ornare.</span>
-            </div>
-          </li>
-          <li>
-            <div className="feature-card">
-              <div className="card-icon">
-                <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
-              </div>
-  
-              <span className="span">Etiam porta euismod malesuada mollis.</span>
-            </div>
-          </li>
-          <li>
-            <div className="feature-card">
-              <div className="card-icon">
-                <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
-              </div>
-              <span className="span">Vivamus sagittis lacus vel augue rutrum.</span>
-            </div>
-          </li>
-        </ul>
+    <section className="application">
+      <div className="registration-container">
+        <h1 className="form-title">Application Form</h1>
+        <form>
+          <div className="form-row">
+            <input type="text" placeholder="First Name" required />
+            <input type="text" placeholder="Last Name" required />
+            <input type="email" placeholder="Email" required />
+            <input type="text" placeholder="First Name" required />
+            <input type="text" placeholder="Last Name" required />
+            <input type="email" placeholder="Email" required />
+          </div>
+          <div className="form-row">
+            <input type="password" placeholder="Password" required />
+            <input type="password" placeholder="Confirm Password" required />
+            <input type="tel" placeholder="Phone Number" required />
+          </div>
+          <div className="form-row">
+            <input type="text" placeholder="Address" required />
+            <input type="text" placeholder="City" required />
+            <input type="text" placeholder="Country" required />
+          </div>
+          <div className="form-row">
+            <input type="text" placeholder="Address" required />
+            <input type="text" placeholder="City" required />
+            <input type="text" placeholder="Country" required />
+            <input type="text" placeholder="City" required />
+            <input type="text" placeholder="Country" required />
+          </div>
+          <div className="form-row">
+            <textarea
+              placeholder="Why do you want to join?"
+              required
+            ></textarea>
+          </div>
+          <button type="submit1">Submit Application</button>
+        </form>
+        <div className="terms-conditions">
+          <h3>Terms and Conditions</h3>
+          <p>
+            Please ensure that all details are filled out correctly. Incomplete
+            or incorrect information may lead to disqualification.
+          </p>
+          <ul>
+            <li>1. All fields marked as required must be completed.</li>
+            <li>2. Provide accurate and up-to-date information.</li>
+            <li>
+              3. Any discrepancies in the provided information can result in
+              disqualification.
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
-  )
-}
+    </section>
+  );
+};
 
-export default Signup
+export default Signup;
