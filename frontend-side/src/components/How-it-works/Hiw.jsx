@@ -7,7 +7,7 @@ const Hiw = () => {
   <div className="container">
     <figure className="feature-banner">
       <img
-        src="./assets/images/hiw.png"
+        src="./assets/images/hiw.jpg"
         width="800"
         height="531"
         loading="lazy"
