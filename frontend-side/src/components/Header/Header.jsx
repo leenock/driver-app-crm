@@ -70,12 +70,12 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="#hiw" className="navbar-link">
+              <a href="/#hiw" className="navbar-link">
                 How it works
               </a>
             </li>
             <li>
-              <a href="#faqs" className="navbar-link">
+              <a href="/#faqs" className="navbar-link">
                 FAQs
               </a>
             </li>
@@ -122,7 +122,7 @@ const Header = () => {
             </li>
           </ul>
         </nav>
-        <a href="/#" className="btn btn-primary">
+        <a href="/driver-application" className="btn btn-primary">
           Apply to Drive
         </a>
         <button

@@ -3,6 +3,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    background-color: darkgoldenrod;
     width: 100%;
     padding-block: 15px;
     box-shadow: var(--shadow-1);

@@ -68,7 +68,7 @@ const Hero = () => {
                     Become a dereva wangu driver, set your schedule and earn money by driving!
                     </p>
                     <div className="btn-wrapper">
-                        <a href="/#" className="btn btn-primary">Sign up Now</a>
+                        <a href="/driver-application" className="btn btn-primary">Sign up Now</a>
                         <a href="/#" className="btn btn-outline">Contact Us</a>
                     </div>
                 </div>
