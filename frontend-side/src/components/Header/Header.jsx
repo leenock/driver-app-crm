@@ -38,9 +38,9 @@ const Header = () => {
         <p style={{ color: "white", fontWeight: "bold", fontSize: "19px" }}>Dereva wangu</p>
           <img
             src="./assets/images/dark.png"
-            width="74"
-            height="24"
-            alt="Adexhome"
+            width="105"
+            height="30"
+            alt="Dereva wangu"
             className="logo-dark"
           />
           
@@ -75,7 +75,7 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="/#" className="navbar-link">
+              <a href="#faqs" className="navbar-link">
                 FAQs
               </a>
             </li>

@@ -1,6 +1,6 @@
 .feature .container {
     display: grid;
-    gap: 50px;
+    gap: 100px;
   }
   
   .feature .section-text { margin-block: 25px 30px; }

@@ -39,7 +39,7 @@ const Faqs = () => {
   ];
 
   return (
-    <section className="about" aria-labelledby="about-label">
+    <section id="faqs" className="about" aria-labelledby="about-label">
       <div className="container">
         <figure className="about-banner">
           <img
