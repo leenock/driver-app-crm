@@ -7,7 +7,7 @@ const Signup = () => {
       <div className="registration-container">
         <div className="left-column">
           <img
-            src="https://cdni.iconscout.com/illustration/premium/thumb/user-login-7210570-5857593.png?f=webp"
+            src="https://cdni.iconscout.com/illustration/premium/thumb/secure-login-and-password-7484843-6148085.png?f=webp"
             alt="Become a Driver"
             className="signup-image"
           />
