@@ -5,57 +5,68 @@ const Signup = () => {
   return (
     <section className="application">
       <div className="registration-container">
-        <h1 className="form-title">Application Form</h1>
-        <form>
-          <div className="form-row">
-            <input type="text" placeholder="First Name" required />
-            <input type="text" placeholder="Last Name" required />
-            <input type="email" placeholder="Email" required />
-            <input type="text" placeholder="First Name" required />
-            <input type="text" placeholder="Last Name" required />
-            <input type="email" placeholder="Email" required />
-          </div>
-          <div className="form-row">
-            <input type="password" placeholder="Password" required />
-            <input type="password" placeholder="Confirm Password" required />
-            <input type="tel" placeholder="Phone Number" required />
-          </div>
-          <div className="form-row">
-            <input type="text" placeholder="Address" required />
-            <input type="text" placeholder="City" required />
-            <input type="text" placeholder="Country" required />
-          </div>
-          <div className="form-row">
-            <input type="text" placeholder="Address" required />
-            <input type="text" placeholder="City" required />
-            <input type="text" placeholder="Country" required />
-            <input type="text" placeholder="City" required />
-            <input type="text" placeholder="Country" required />
-          </div>
-          <div className="form-row">
-            <textarea
-              placeholder="Why do you want to join?"
-              required
-            ></textarea>
-          </div>
-          <button type="submit1">Submit Application</button>
-        </form>
-        <div className="terms-conditions">
-          <h3>Terms and Conditions</h3>
-          <p>
-            Please ensure that all details are filled out correctly. Incomplete
-            or incorrect information may lead to disqualification.
-          </p>
-          <ul>
-            <li>1. All fields marked as required must be completed.</li>
-            <li>2. Provide accurate and up-to-date information.</li>
-            <li>
-              3. Any discrepancies in the provided information can result in
-              disqualification.
-            </li>
-          </ul>
+        <div className="left-column">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1712789539339-ac2b7ac7ce91?q=80&w=2001&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Become a Driver"
+            className="signup-image"
+          />
+        </div>
+        <div className="right-column">
+          <h1 className="form-title">Become a Driver</h1>
+          <form class="input-wrapper">
+            <div className="form-row">
+              <label htmlFor="email">Email</label>
+              <div className="email-input">
+                <input
+                  type="email"
+                  name="email_address"
+                  placeholder="Email Address"
+                  required
+                  class="input-field"
+                />
+              </div>
+            </div>
+            <div className="form-row">
+              <label htmlFor="phone">Phone number</label>
+              <div className="phone-input">
+                <select
+                  id="country-code"
+                  defaultValue="+254"
+                  class="input-field"
+                >
+                  <option value="+254">KE +254</option>
+                  <option value="+256">UG +256</option>
+                  {/* Add more country codes as needed */}
+                </select>
+                <input
+                  type="tel"
+                  id="phone"
+                  placeholder="Mobile number"
+                  class="input-field"
+                  required
+                />
+              </div>
+            </div>
+            <div className="form-row">
+              <label htmlFor="city">City</label>
+              <div className="custom-dropdown">
+                <select id="city" defaultValue="Nairobi" class="input-field">
+                  <option value="Nairobi">Nairobi</option>
+                  {/* Add more cities as needed */}
+                </select>
+                <div className="arrow-down"></div>
+              </div>
+            </div>
+            <button type="submit2">Sign up as a Driver</button>
+          </form>
+          <br />
+         <p>By signing up, you agree to our Terms of Service and Privacy policy,
+         Already have an account? Log in ↗
+         </p>
         </div>
       </div>
+      
     </section>
   );
 };
