@@ -80,7 +80,7 @@ const Header = () => {
               </a>
             </li>
             <li>
-              <a href="/#" className="navbar-link">
+              <a href="/login" className="navbar-link">
                 Login
               </a>
             </li>
