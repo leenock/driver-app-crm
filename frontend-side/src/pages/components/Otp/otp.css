@@ -95,17 +95,10 @@
     color:black;
   }
   
- 
   
-  .button-link:hover {
-    background-color: #b8860b; /* Darker shade on hover */
-  }
-  
-  
-  button[type="submit-login"] {
-    width: 100%;
+  button[type="submit2"] {
+    width: auto;
     padding: 10px 20px;
-    border-radius: 9999px;
     background-color: darkgoldenrod;
     color: #fff;
     font-weight: bold;
@@ -115,7 +108,7 @@
   }
   
   
-  button[type="submit-login"]:hover {
+  button[type="submit2"]:hover {
     background-color: black;
   }
   
@@ -145,7 +138,7 @@
       flex-direction: column;
     }
   
-    button[type="submit-login"] {
+    button[type="submit2"] {
       margin-left: 0;
     }
   }

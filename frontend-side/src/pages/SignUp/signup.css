@@ -100,7 +100,7 @@ button[type="submit2"] {
   width: auto;
   padding: 10px 20px;
   border: none;
-  border-radius: 9999px;; /* Adjust the border-radius to your desired value for rounded corners */
+  border-radius: 9999px; /* Adjust the border-radius to your desired value for rounded corners */
   background-color: darkgoldenrod;
   color: #fff;
   font-weight: bold;

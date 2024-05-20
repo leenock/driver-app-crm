@@ -1,9 +1,7 @@
 import React from "react";
-import "./login.css";
-import { Link } from "react-router-dom";
+import "./otp.css";
 
-
-const Login = () => {
+const Otp = () => {
   return (
     <section className="application">
       <div className="registration-container">
@@ -15,35 +13,24 @@ const Login = () => {
           />
         </div>
         <div className="right-column">
-          <h1 className="form-title">Dereva wangu</h1>
+          <h1 className="form-title">Login to your account</h1>
           <form class="input-wrapper">
             <div className="form-row">
-              <label htmlFor="phone">Phone</label>
+              <label htmlFor="phone">Please enter 6-digit code:</label>
               <div className="phone-input">
-                <select
-                  id="country-code"
-                  defaultValue="+254"
-                  class="input-field"
-                >
-                  <option value="+254">KE +254</option>
-                  <option value="+256">UG +256</option>
-                  {/* Add more country codes as needed */}
-                </select>
                 <input
                   type="tel"
                   id="phone"
-                  placeholder="Phone number"
+                  placeholder="Your verification code"
                   class="input-field"
                   required
                 />
               </div>
             </div>
-            <Link to="/verification-code">
-            <button type="submit-login">Continue</button>
-            </Link>
+            <button type="submit2">Login</button>
           </form>
           <br />
-         <p>Forgot Password ↗
+         <p>Did not get the code? ↗
          </p>
         </div>
       </div>
@@ -52,4 +39,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Otp;
