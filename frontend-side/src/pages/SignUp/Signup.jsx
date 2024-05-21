@@ -1,9 +1,11 @@
 import React from "react";
 import "./signup.css";
+import Header from '../../components/Header/Header';
 
 const Signup = () => {
   return (
     <section className="application">
+       <Header />
       <div className="registration-container">
         <div className="left-column">
           <img

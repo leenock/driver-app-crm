@@ -1,11 +1,11 @@
 import React from "react";
 import "./login.css";
+import Header from '../../components/Header/Header';
 import { Link } from "react-router-dom";
-
-
 const Login = () => {
   return (
     <section className="application">
+      <Header />
       <div className="registration-container">
         <div className="left-column">
           <img

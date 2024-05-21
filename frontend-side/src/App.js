@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -8,7 +9,18 @@ import Login from './pages/Login/Login';
 import Otp from './pages/components/Otp/Otp';
 import Dashboard from './pages/Dashboard/dashboard';
 
-function App() {
+const App = () => {
+
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  
+  const openSidebar = () => {
+    setSidebarOpen(true);
+  }
+
+  const closeSidebar = () => {
+    setSidebarOpen(false);
+  }
+
   return (
     <div className="App">
       <Router>
