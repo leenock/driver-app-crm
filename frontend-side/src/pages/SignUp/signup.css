@@ -121,7 +121,7 @@ button[type="submit2"]:hover {
   margin-block-start: 25px;
 }
 
-.input-field {
+.input-field-sn{
   background-color: var(--white_a3);
   color: grey;
   font-size: var(--fs-7);
@@ -132,7 +132,7 @@ button[type="submit2"]:hover {
   outline: none;
 }
 
-.input-field::placeholder { color: inherit; }
+.input-field-sn::placeholder { color: inherit; }
 
 
 @media (max-width: 768px) {

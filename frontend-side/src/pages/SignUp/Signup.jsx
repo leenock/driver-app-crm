@@ -25,7 +25,7 @@ const Signup = () => {
                   name="email_address"
                   placeholder="Email Address"
                   required
-                  class="input-field"
+                  class="input-field-sn"
                 />
               </div>
             </div>
@@ -35,7 +35,7 @@ const Signup = () => {
                 <select
                   id="country-code"
                   defaultValue="+254"
-                  class="input-field"
+                  class="input-field-sn"
                 >
                   <option value="+254">KE +254</option>
                   <option value="+256">UG +256</option>
@@ -45,7 +45,7 @@ const Signup = () => {
                   type="tel"
                   id="phone"
                   placeholder="Mobile number"
-                  class="input-field"
+                  class="input-field-sn"
                   required
                 />
               </div>
@@ -53,7 +53,7 @@ const Signup = () => {
             <div className="form-row">
               <label htmlFor="city">City</label>
               <div className="custom-dropdown">
-                <select id="city" defaultValue="Nairobi" class="input-field">
+                <select id="city" defaultValue="Nairobi" class="input-field-sn">
                   <option value="Nairobi">Nairobi</option>
                   {/* Add more cities as needed */}
                 </select>

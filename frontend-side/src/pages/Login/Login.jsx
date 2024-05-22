@@ -23,7 +23,7 @@ const Login = () => {
                 <select
                   id="country-code"
                   defaultValue="+254"
-                  class="input-field"
+                  class="input-field-lg"
                 >
                   <option value="+254">KE +254</option>
                   <option value="+256">UG +256</option>
@@ -33,7 +33,7 @@ const Login = () => {
                   type="tel"
                   id="phone"
                   placeholder="Phone number"
-                  class="input-field"
+                  class="input-field-lg"
                   required
                 />
               </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import "./main.css";
 import hello from "../../../assets/images/hello.svg";
+import Chart from "../../components/Charts/Chart";
+
 
 const Main = () => {
   return (
@@ -59,7 +61,7 @@ const Main = () => {
               </div>
               <i className="fa fa-usd"></i>
             </div>
-            <div id="apex1"></div>
+           <Chart />
           </div>
 
           <div className="charts__right">

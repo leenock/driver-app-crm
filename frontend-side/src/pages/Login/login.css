@@ -119,14 +119,12 @@
     background-color: black;
   }
   
-  
-  
   .input-wrapper {
     position: relative;
     margin-block-start: 25px;
   }
   
-  .input-field {
+  .input-field-lg {
     background-color: var(--white_a3);
     color: grey;
     font-size: var(--fs-7);
@@ -137,7 +135,7 @@
     outline: none;
   }
   
-  .input-field::placeholder { color: inherit; }
+  .input-field-lg::placeholder { color: inherit; }
   
   
   @media (max-width: 768px) {

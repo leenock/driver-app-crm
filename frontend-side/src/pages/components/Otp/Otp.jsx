@@ -22,7 +22,7 @@ const Otp = () => {
                   type="tel"
                   id="phone"
                   placeholder="Your verification code"
-                  class="input-field"
+                  class="input-field-otp"
                   required
                 />
               </div>

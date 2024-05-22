@@ -1,6 +1,7 @@
 import React from 'react'
-import { XYPlot, Lineseries, XAxis, YAxis, VerticalGridLines, HorizontalGridLines } from 'recharts';
+import "../../../../node_modules/react-vis/dist/style.css"
 
+import { XYPlot, LineSeries, XAxis, YAxis, VerticalGridLines, HorizontalGridLines} from 'react-vis';
 
 const data = [
     { x: 0, y:8 },
@@ -16,7 +17,7 @@ const data = [
  
   ];
 
-const charts = () => {
+const chart = () => {
   return (
    <div style={{ marginTop: "15px"}}>
     <XYPlot height={300} width={300}>
@@ -24,12 +25,12 @@ const charts = () => {
         <HorizontalGridLines />
         <XAxis />
         <YAxis />
-        <Lineseries data={data} color="red" />
-        <Lineseries data={data} color="purple" />
-        <Lineseries data={data} color="yellow" />
+        <LineSeries data={data} color="red" />
+        <LineSeries data={data} color="purple" />
+        <LineSeries data={data} color="yellow" />
     </XYPlot>
    </div>
   )
 }
 
-export default charts
+export default chart

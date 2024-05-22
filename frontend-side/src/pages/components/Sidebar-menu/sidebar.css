@@ -1,7 +1,7 @@
 /*  SIDEBAR STARTS HERE  */
 
 #sidebar {
-    background: #020509;
+    background: darkslategray;
     grid-area: sidebar;
     overflow-y: auto;
     padding: 20px;
@@ -56,16 +56,16 @@
   
   .active_menu_link {
     background: rgba(62, 161, 117, 0.3);
-    color: #3ea175;
+    color: #fff;
   }
   
   .active_menu_link a {
-    color: #3ea175 !important;
+    color: #fff !important;
   }
   
   .sidebar__link > a {
     text-decoration: none;
-    color: #a5aaad;
+    color: white;
     font-weight: 700;
   }
   
