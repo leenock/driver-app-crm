@@ -1,18 +1,25 @@
-import React from 'react'
-import Navbar from '../components/TopMenu/Navbar'
-import Sidebar from '../components/Sidebar-menu/Sidebar'
-import Content from '../components/Content/Content'
-import Footer from '../components/Footer/Footer'
+import { useState } from "react";
+import Navbar from "../components/TopMenu/Navbar";
+import Sidebar from "../components/Sidebar-menu/Sidebar";
+import Main from "../components/Main/Main";
 
-const dashboard = () => {
+const Dashboard = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const openSidebar = () => {
+    setSidebarOpen(true);
+  };
+
+  const closeSidebar = () => {
+    setSidebarOpen(false);
+  };
   return (
-    <>
-    < Navbar />
-    <Sidebar />
-    <Content />
-    <Footer />
-    </>
-  )
-}
+    <div className="container-dashboard">
+      <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
+      < Main />
+      <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar}  />
+    </div>
+  );
+};
 
-export default dashboard
+export default Dashboard;
