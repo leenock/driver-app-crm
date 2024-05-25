@@ -43,7 +43,7 @@ const Faqs = () => {
       <div className="container">
         <figure className="about-banner">
           <img
-            src="./assets/images/about-banner.png"
+            src="https://r2.erweima.ai/imgcompressed/compressed_b3991183018a17fc952e93a7be711695.webp"
             width="800"
             height="580"
             loading="lazy"

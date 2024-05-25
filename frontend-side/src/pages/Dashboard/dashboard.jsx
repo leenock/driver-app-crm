@@ -18,6 +18,7 @@ const Dashboard = () => {
       <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
       < Main />
       <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar}  />
+     
     </div>
   );
 };

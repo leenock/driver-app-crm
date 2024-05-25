@@ -121,7 +121,7 @@
   
   .input-field-otp{
     background-color: var(--white_a3);
-    color: white;
+    color: grey;
     font-size: var(--fs-7);
     padding: 12px 16px;
     border: 1px solid var(--dark-cornflower-blue_a7);
