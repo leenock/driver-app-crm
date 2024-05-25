@@ -60,6 +60,18 @@ const Signup = () => {
                 <div className="arrow-down"></div>
               </div>
             </div>
+            <div className="form-row">
+              <label htmlFor="Password">Password</label>
+              <div className="Password-input">
+                <input
+                  type="password"
+                  name="Pass_word"
+                  placeholder="Password"
+                  required
+                  class="input-field-sn"
+                />
+              </div>
+            </div>
             <button type="submit2">Sign up as a Driver</button>
           </form>
           <br />

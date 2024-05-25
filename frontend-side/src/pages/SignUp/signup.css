@@ -52,6 +52,7 @@ form {
 }
 
 .email-input,
+.Password-input,
 .phone-input {
   display: flex;
   gap: 10px;
