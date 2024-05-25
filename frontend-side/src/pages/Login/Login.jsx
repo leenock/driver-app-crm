@@ -38,6 +38,18 @@ const Login = () => {
                 />
               </div>
             </div>
+            <div className="form-row">
+              <label htmlFor="Password">Password</label>
+              <div className="Password-input">
+                <input
+                  type="password"
+                  name="Pass_word"
+                  placeholder="Password"
+                  required
+                  class="input-field-sn"
+                />
+              </div>
+            </div>
             <Link to="/verification-code">
             <button type="submit-login">Continue</button>
             </Link>
