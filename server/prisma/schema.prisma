@@ -36,3 +36,9 @@ model City {
   name          String
   users         User[]    // One-to-many relationship with users
 }
+model product {
+  id Int @id @default(autoincrement())
+  name String
+  price Int
+  createdAt DateTime @default(now())
+}
