@@ -30,7 +30,7 @@ const Signup = () => {
               </div>
             </div>
             <div className="form-row">
-              <label htmlFor="phone">Phone number</label>
+              <label htmlFor="phone">PhoneNumber</label>
               <div className="phone-input">
                 <select
                   id="country-code"
