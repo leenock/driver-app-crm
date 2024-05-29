@@ -55,6 +55,9 @@ const Signup = () => {
               <div className="custom-dropdown">
                 <select id="city" defaultValue="Nairobi" class="input-field-sn">
                   <option value="Nairobi">Nairobi</option>
+                  <option value="Mombasa">Mombasa</option>
+                  <option value="Embu">Embu</option>
+                  <option value="Kisumu">Kisumu</option>
                   {/* Add more cities as needed */}
                 </select>
                 <div className="arrow-down"></div>
@@ -71,6 +74,18 @@ const Signup = () => {
                   class="input-field-sn"
                 />
               </div>
+            </div>
+            <div className="form-row">
+            <label htmlFor="Password">Confirm Password</label>
+            <div className="Password-input">
+            <input
+                  type="password"
+                  name="confirm_Pass_word"
+                  placeholder="Confirm Password"
+                  required
+                  class="input-field-sn"
+                />
+            </div>
             </div>
             <button type="submit2">Sign up as a Driver</button>
           </form>
