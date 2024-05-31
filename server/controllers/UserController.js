@@ -1,6 +1,7 @@
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
+
  const createProduct = async (req, res) => {
   const { name, price } = req.body
   try {
@@ -37,6 +38,7 @@ const prisma = new PrismaClient();
   }
 }
 module.exports = {
+  registerUser,
   getProducts,
   getProductById,
   createProduct,
