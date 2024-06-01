@@ -10,12 +10,11 @@ const saltRounds = 10;
 app.use(express.json());
 
 // Create User Endpoint
-app.post('/register', async (req, res) => {
-  const { email, phoneNumber, city, password } = req.body;
-
+const registerUser = async (req, res) => {
+  const { email, phoneNumber, city, password } = req.body
   try {
     // Check if email already exists
-    const existingUser = await prisma.user.findUnique({
+    const existingUser = await prisma.User.findUnique({
       where: {
         email: email,
       },
@@ -24,12 +23,11 @@ app.post('/register', async (req, res) => {
     if (existingUser) {
       return res.status(400).json({ msg: 'Email already exists' });
     }
-
     // Hash the password
     const hashedPassword = await bcrypt.hash(password, saltRounds);
 
     // Create the user
-    const user = await prisma.user.create({
+    const user = await prisma.User.create({
       data: {
         email,
         phoneNumber,
@@ -47,7 +45,9 @@ app.post('/register', async (req, res) => {
   } catch (error) {
     res.status(400).json({ msg: error.message });
   }
-});
+};
+
+/////////User Sign up/////////
 
  const createProduct = async (req, res) => {
   const { name, price } = req.body
