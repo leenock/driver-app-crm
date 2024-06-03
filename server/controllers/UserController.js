@@ -9,43 +9,48 @@ const saltRounds = 10;
 
 app.use(express.json());
 
+
+
+
 // Create User Endpoint
 const registerUser = async (req, res) => {
-  const { email, phoneNumber, city, password } = req.body
-  try {
-    // Check if email already exists
-    const existingUser = await prisma.User.findUnique({
-      where: {
-        email: email,
-      },
-    });
-
-    if (existingUser) {
-      return res.status(400).json({ msg: 'Email already exists' });
-    }
-    // Hash the password
-    const hashedPassword = await bcrypt.hash(password, saltRounds);
-
-    // Create the user
-    const user = await prisma.User.create({
-      data: {
-        email,
-        phoneNumber,
-        city: {
-          connectOrCreate: {
-            where: { name: city },
-            create: { name: city },
-          },
+    const { email, phoneNumber, city, password } = req.body;
+    try {
+      // Check if email already exists
+      const existingUser = await prisma.User.findUnique({
+        where: {
+          email: email,
         },
-        password: hashedPassword,
-      },
-    });
-
-    res.status(201).json(user);
-  } catch (error) {
-    res.status(400).json({ msg: error.message });
-  }
-};
+      });
+  
+      if (existingUser) {
+        return res.status(400).json({ msg: 'Email already exists' });
+      }
+      
+      // Hash the password
+      const hashedPassword = await bcrypt.hash(password, saltRounds);
+  
+      // Create the user
+      const newUser = await prisma.User.create({
+        data: {
+          email,
+          phoneNumber,
+          city: {
+            connectOrCreate: {
+              where: { name: city },
+              create: { name: city },
+            },
+          },
+          password: hashedPassword,
+        },
+      });
+  
+      res.status(201).json(newUser);
+    } catch (error) {
+      res.status(400).json({ msg: error.message });
+    }
+  };
+  
 
 /////////User Sign up/////////
 

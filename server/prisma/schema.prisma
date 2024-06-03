@@ -22,23 +22,20 @@ model Post {
 }
 
 model User {
-id        Int       @id @default(autoincrement())
-email    String    @unique
+id            Int       @id @default(autoincrement())
+email         String    @unique
 phoneNumber   String    @unique
-city          City      @relation(fields: [cityId], references: [id])
-cityId        Int
+city          String     
 password      String
 createdAt     DateTime  @default(now())
 updatedAt     DateTime  @updatedAt
 }
-model City {
-  id            Int       @id @default(autoincrement())
-  name          String
-  users         User[]    // One-to-many relationship with users
-}
+
 model product {
   id Int @id @default(autoincrement())
   name String
   price Int
   createdAt DateTime @default(now())
 }
+
+// new user prisma 
