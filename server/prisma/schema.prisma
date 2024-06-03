@@ -21,10 +21,10 @@ model Post {
   updatedAt DateTime  @updatedAt
 }
 
-model User {
+model registeruser {
 id            Int       @id @default(autoincrement())
 email         String    @unique
-phoneNumber   String    @unique
+phoneNumber   String    @unique 
 city          String     
 password      String
 createdAt     DateTime  @default(now())

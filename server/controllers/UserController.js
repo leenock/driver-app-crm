@@ -3,55 +3,50 @@ const prisma = new PrismaClient();
 
 const express = require('express');
 const app = express();
-const bcrypt = require('bcryptjs');
 
-const saltRounds = 10;
 
 app.use(express.json());
 
-
-
-
-// Create User Endpoint
-const registerUser = async (req, res) => {
+const registeruser = async (req, res) => {
     const { email, phoneNumber, city, password } = req.body;
     try {
-      // Check if email already exists
-      const existingUser = await prisma.User.findUnique({
-        where: {
-          email: email,
-        },
-      });
-  
-      if (existingUser) {
-        return res.status(400).json({ msg: 'Email already exists' });
-      }
-      
-      // Hash the password
-      const hashedPassword = await bcrypt.hash(password, saltRounds);
-  
-      // Create the user
-      const newUser = await prisma.User.create({
+      const registeruser = await prisma.registeruser.create({
         data: {
-          email,
-          phoneNumber,
-          city: {
-            connectOrCreate: {
-              where: { name: city },
-              create: { name: city },
-            },
-          },
-          password: hashedPassword,
+          email: email,
+          phoneNumber: phoneNumber,
+          city: city,
+          password: password,
         },
       });
-  
-      res.status(201).json(newUser);
+      res.status(201).json(registeruser);
     } catch (error) {
       res.status(400).json({ msg: error.message });
     }
-  };
-  
+};
 
+const getuser = async (req, res) => {
+    try {
+        const response = await prisma.registeruser.findMany()
+        res.status(200).json(response)
+    } catch (error) {
+        res.status(500).json({ msg: error.message })
+    }
+  }
+  
+   const getuserById = async (req, res) => {
+    try {
+        const response = await prisma.registeruser.findUnique({
+            where: {
+                id: Number(req.params.id),
+            },
+        })
+        res.status(200).json(response)
+    } catch (error) {
+        res.status(404).json({ msg: error.message })
+    }
+  }
+
+  
 /////////User Sign up/////////
 
  const createProduct = async (req, res) => {
@@ -90,7 +85,9 @@ const registerUser = async (req, res) => {
   }
 }
 module.exports = {
-  registerUser,
+  registeruser,
+  getuser,
+  getuserById,
   getProducts,
   getProductById,
   createProduct,
