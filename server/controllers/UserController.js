@@ -1,5 +1,7 @@
 const bcrypt = require("bcryptjs");
 const { PrismaClient } = require("@prisma/client");
+const { validateEmail, validatePhoneNumber } = require('../utils/validations/validation.js');
+
 const prisma = new PrismaClient();
 const express = require("express");
 const app = express();
@@ -7,20 +9,14 @@ app.use(express.json());
 
 const registerdriver = async (req, res) => {
   const { email, phoneNumber, city, password } = req.body;
-  // Regular expression for email validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    return res.status(400).json({ msg: "Invalid email format" });
-  }
-  // Validate phone number format (numbers only and 13 characters long)
-  const phoneRegex = /^\d{13}$/;
-  if (!phoneRegex.test(phoneNumber)) {
-    return res
-      .status(400)
-      .json({
-        msg: "Phone number must contain only numbers and be 13 characters long",
-      });
-  }
+// Validate email format
+if (!validateEmail(email)) {
+  return res.status(400).json({ msg: 'Invalid email format' });
+}
+// Validate phone number format
+if (!validatePhoneNumber(phoneNumber)) {
+  return res.status(400).json({ msg: 'Phone number must contain only numbers and be 13 characters long' });
+}
   try {
     // Check if email already exists
     const existingEmail = await prisma.registeruser.findUnique({

@@ -32,15 +32,7 @@ const Signup = () => {
             <div className="form-row">
               <label htmlFor="phone">PhoneNumber</label>
               <div className="phone-input">
-                <select
-                  id="country-code"
-                  defaultValue="+254"
-                  class="input-field-sn"
-                >
-                  <option value="+254">KE +254</option>
-                  <option value="+256">UG +256</option>
-                  {/* Add more country codes as needed */}
-                </select>
+               
                 <input
                   type="tel"
                   id="phone"
