@@ -52,7 +52,7 @@ const Signup = () => {
 
       if (response.ok) {
         setSuccess(
-          "Registration successful! Use your Email and password to Login"
+          "Registration successful! Use your Phone Number and password to Login"
         );
         setEmail("");
         setPhoneNumber("");
