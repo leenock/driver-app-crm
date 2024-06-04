@@ -115,6 +115,46 @@ button[type="submit2"]:hover {
   background-color: black;
 }
 
+/* Alert box styles */
+.alert-box {
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.alert-box p {
+  margin: 0;
+}
+
+.alert-box.error {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.alert-box.success {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+.alert-box .icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.error-icon {
+  color: #f5c6cb;
+}
+
+.success-icon {
+  color: #c3e6cb;
+}
+
+
 
 
 .input-wrapper {
