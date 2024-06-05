@@ -1,8 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import "./login.css";
-import Header from '../../components/Header/Header';
+import Header from "../../components/Header/Header";
+import { useNavigate } from 'react-router-dom';
+
+
 //import { Link } from "react-router-dom";
 const Login = () => {
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate  = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+
+    try {
+      const response = await fetch('http://localhost:4000/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ phoneNumber, password })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Store token in localStorage
+        localStorage.setItem('token', data.token);
+        navigate('/driver-dashboard'); // Redirect to dashboard
+      } else {
+        setError(data.msg);
+      }
+    } catch (error) {
+      setError('An error occurred. Please try again later.');
+    }
+  };
+
   return (
     <section className="application">
       <Header />
@@ -15,8 +50,9 @@ const Login = () => {
           />
         </div>
         <div className="right-column">
-          <h1 className="form-title">Dereva wangu</h1>
-          <form class="input-wrapper">
+          <h1 className="form-title">Dereva Wangu</h1>
+          <form className="input-wrapper" onSubmit={handleSubmit}>
+            {error && <div className="alert-box error">{error}</div>}
             <div className="form-row">
               <label htmlFor="phone">Phone</label>
               <div className="phone-input">
@@ -24,8 +60,11 @@ const Login = () => {
                   type="tel"
                   id="phone"
                   placeholder="Phone number"
-                  class="input-field-lg"
+                  className="input-field-lg"
                   required
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  autoComplete="tel-national"
                 />
               </div>
             </div>
@@ -37,20 +76,19 @@ const Login = () => {
                   name="Pass_word"
                   placeholder="Password"
                   required
-                  class="input-field-sn"
+                  className="input-field-sn"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  autoComplete="new-password"
                 />
               </div>
             </div>
-           
-            <button type="submit-login">Continue</button>
-            
+            <button type="submit2">Continue</button>
           </form>
           <br />
-         <p>Forgot Password ↗
-         </p>
+          <p>Forgot Password ↗</p>
         </div>
       </div>
-      
     </section>
   );
 };
