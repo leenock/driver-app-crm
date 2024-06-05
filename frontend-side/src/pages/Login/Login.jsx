@@ -1,7 +1,7 @@
 import React from "react";
 import "./login.css";
 import Header from '../../components/Header/Header';
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <section className="application">
@@ -41,9 +41,9 @@ const Login = () => {
                 />
               </div>
             </div>
-            <Link to="/verification-code">
+           
             <button type="submit-login">Continue</button>
-            </Link>
+            
           </form>
           <br />
          <p>Forgot Password ↗
