@@ -7,10 +7,10 @@ import Signup from "./pages/SignUp/Signup";
 import Login from "./pages/Login/Login";
 import Otp from "./pages/components/Otp/Otp";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import Auth from "./auth/Auth";
 
-
-// log out 
-// Token and User Authentications ---  Tommorow 
+// log out
+// Token and User Authentications ---  Tommorow
 
 const App = () => {
   return (
@@ -19,11 +19,18 @@ const App = () => {
         <div>
           {/* <Header /> */}
           <Routes>
-            <Route path="/" element={<Landingpage />}></Route>
-            <Route path="/driver-application" element={<Signup />}></Route>
-            <Route path="/login" element={<Login />}></Route>
-            <Route path="/verification-code" element={<Otp />}></Route>
-            <Route path="/driver-dashboard" element={<Dashboard />}></Route>
+            <Route path="/" element={<Landingpage />} />
+            <Route path="/driver-application" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/verification-code" element={<Otp />} />
+            <Route
+              path="/driver-dashboard"
+              element={
+                <Auth>
+                  <Dashboard />
+                </Auth>
+              }
+            />
           </Routes>
         </div>
       </Router>

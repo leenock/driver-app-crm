@@ -1,4 +1,5 @@
 import React from "react";
+import { logout } from "../../../auth/Auth"; 
 import "./sidebar.css";
 // import logo from "../../../assets/images/feature-banner.png";
 
@@ -91,7 +92,11 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
         </div>
         <div className="sidebar__logout">
           <i className="fa fa-power-off"></i>
-          <a href="/#">Log out</a>
+          <button onClick={logout}>
+            <a href="/#" style={{ color: "inherit", textDecoration: "none" }}>
+              Log out
+            </a>
+          </button>
         </div>
       </div>
     </div>

@@ -1,17 +1,16 @@
 import React from 'react';
-import { Route, Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
-const Auth = ({ component: Component, ...rest }) => (
-  <Route
-    {...rest}
-    render={props =>
-      localStorage.getItem('token') ? (
-        <Component {...props} />
-      ) : (
-        <Navigate to="/login" />
-      )
-    }
-  />
-);
+const Auth = ({ children }) => {
+  const token = localStorage.getItem('token');
+  return token ? children : <Navigate to="/login" />;
+};
+
+export const logout = () => {
+  // Clear the token from localStorage
+  localStorage.removeItem('token');
+  // Redirect to login page
+  window.location.href = '/login';
+};
 
 export default Auth;

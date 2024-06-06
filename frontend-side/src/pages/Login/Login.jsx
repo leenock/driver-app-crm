@@ -1,40 +1,39 @@
 import React, { useState } from "react";
 import "./login.css";
 import Header from "../../components/Header/Header";
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
 
 //import { Link } from "react-router-dom";
 const Login = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const navigate  = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
+    setError("");
 
     try {
-      const response = await fetch('http://localhost:4000/login', {
-        method: 'POST',
+      const response = await fetch("http://localhost:4000/login", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ phoneNumber, password })
+        body: JSON.stringify({ phoneNumber, password }),
       });
 
       const data = await response.json();
 
       if (response.ok) {
         // Store token in localStorage
-        localStorage.setItem('token', data.token);
-        navigate('/driver-dashboard'); // Redirect to dashboard
+        localStorage.setItem("token", data.token);
+        navigate("/driver-dashboard"); // Redirect to dashboard
       } else {
         setError(data.msg);
       }
     } catch (error) {
-      setError('An error occurred. Please try again later.');
+      setError("An error occurred. Please try again later.");
     }
   };
 

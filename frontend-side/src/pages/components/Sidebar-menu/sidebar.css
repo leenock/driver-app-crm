@@ -1,5 +1,26 @@
 /*  SIDEBAR STARTS HERE  */
 
+.sidebar__logout button {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar__logout a {
+  display: block;
+  
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
 #sidebar {
     background: darkslategray;
     grid-area: sidebar;
@@ -75,7 +96,7 @@
   }
   
   .sidebar__logout {
-    margin-top: 20px;
+    margin-top: -20px;
     padding: 10px;
     color: #e65061;
   }
