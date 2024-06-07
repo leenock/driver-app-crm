@@ -9,9 +9,6 @@ import Otp from "./pages/components/Otp/Otp";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Auth from "./auth/Auth";
 
-// log out
-// Token and User Authentications ---  Tommorow
-
 const App = () => {
   return (
     <div className="App">
