@@ -46,7 +46,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
         </div>
         <div className="sidebar__link">
           <i className="fa fa-handshake-o"></i>
-          <a href="/#">Backoffice sspecial requests</a>
+          <a href="/#">Backoffice special requests</a>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-handshake-o"></i>
