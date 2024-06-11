@@ -9,7 +9,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
       <div className="sidebar__title">
         <div className="sidebar__img">
           {/* <img src={logo} alt="logo" /> */}
-          <h1>My Driver App</h1>
+          <h1>My-Driver App</h1>
         </div>
         <i
           className="fa fa-times"
