@@ -29,7 +29,7 @@ const Login = () => {
       if (response.ok) {
         // Store token in localStorage
         localStorage.setItem("token", data.token);
-        navigate("/driver-dashboard"); // Redirect to dashboard
+        navigate("/driver-dashboard", { state: { email: data.email } }); // Redirect to dashboard
       } else {
         setError(data.msg);
       }

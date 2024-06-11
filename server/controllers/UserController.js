@@ -36,13 +36,12 @@ const loginUser = async (req, res) => {
       console.log("Password does not match");
       return res.status(400).json({ msg: "Invalid  password" });
     }
-
     // Generate JWT token
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
 
-    res.status(200).json({ msg: "Login successful", token });
+    res.status(200).json({ msg: "Login successful", token, email: user.email});
   } catch (error) {
     console.error("Error during login:", error);
     res.status(500).json({ msg: "Server error", error: error.message });
