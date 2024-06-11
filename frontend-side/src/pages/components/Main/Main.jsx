@@ -2,7 +2,6 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import "./main.css";
 import hello from "../../../assets/images/hello.svg";
-import Chart from "../../components/Charts/Chart";
 
 const Main = () => {
   const location = useLocation();
@@ -13,7 +12,7 @@ const Main = () => {
         <div className="main__title">
           <img src={hello} alt="" />
           <div className="main__greeting">
-            <h1>Welcome {email}</h1>
+            <h2>Welcome-back {email}</h2>
             <p>Welcome to your admin dashboard</p>
           </div>
         </div>
@@ -61,7 +60,6 @@ const Main = () => {
               </div>
               <i className="fa fa-usd"></i>
             </div>
-            <Chart />
           </div>
 
           <div className="charts__right">
