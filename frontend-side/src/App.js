@@ -7,6 +7,7 @@ import Signup from "./pages/SignUp/Signup";
 import Login from "./pages/Login/Login";
 import Otp from "./pages/components/Otp/Otp";
 import Dashboard from "./pages/Dashboard/Dashboard";
+
 import Auth from "./auth/Auth";
 
 const App = () => {
