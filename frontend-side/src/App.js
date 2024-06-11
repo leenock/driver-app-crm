@@ -6,7 +6,7 @@ import Landingpage from "./components/Landingpage";
 import Signup from "./pages/SignUp/Signup";
 import Login from "./pages/Login/Login";
 import Otp from "./pages/components/Otp/Otp";
-import Dashboard from "./pages/Dashboard/Dashboard";
+import Dash from "./pages/Dashboard/Dash";
 
 import Auth from "./auth/Auth";
 
@@ -25,7 +25,7 @@ const App = () => {
               path="/driver-dashboard"
               element={
                 <Auth>
-                  <Dashboard />
+                  <Dash />
                 </Auth>
               }
             />
