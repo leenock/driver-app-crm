@@ -1,6 +1,5 @@
 {
-    "rewrites": [
-      {"source": "/:a*", "destination": "/"}
-    ]
-  }
-  
+  "version": 2,
+  "builds": [{ "src": "./server.js", "use": "@versal/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/" }]
+}
