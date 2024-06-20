@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Landingpage from "./components/Landingpage";
 import Signup from "./pages/SignUp/Signup";
 import Login from "./pages/Login/Login";
+import Administration from "./pages/Staff/Administration";
 import Otp from "./pages/components/Otp/Otp";
 import Dash from "./pages/Dashboard/Dash";
 
@@ -19,6 +20,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Landingpage />} />
             <Route path="/driver-application" element={<Signup />} />
+            <Route path="/admin-user" element={<Administration />} />
             <Route path="/login" element={<Login />} />
             <Route path="/verification-code" element={<Otp />} />
             <Route

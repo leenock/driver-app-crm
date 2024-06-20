@@ -26,6 +26,10 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
         <h2>Admin management system</h2>
         <div className="sidebar__link">
           <i className="fa fa-user-secret" aria-hidden="true"></i>
+          <a href="/#">User management</a>
+        </div>
+        <div className="sidebar__link">
+          <i className="fa fa-user-secret" aria-hidden="true"></i>
           <a href="/#">Driver management</a>
         </div>
         <div className="sidebar__link">
