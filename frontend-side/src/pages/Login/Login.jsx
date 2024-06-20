@@ -50,7 +50,7 @@ const Login = () => {
           />
         </div>
         <div className="right-column">
-          <h1 className="form-title">Dereva Wangu</h1>
+          <h1 className="form-title">Dreva Wangu</h1>
           <form className="input-wrapper" onSubmit={handleSubmit}>
             {error && <div className="alert-box error">{error}</div>}
             <div className="form-row">
