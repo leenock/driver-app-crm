@@ -49,11 +49,19 @@ model admin {
 }
 
 model staff {
-  id          Int    @id @default(autoincrement())
+  id          Int      @id @default(autoincrement())
   username    String
-  email       String @unique
+  email       String   @unique
   FirstName   String
   LastName    String
-  phonenumber String @unique
+  phonenumber String   @unique
   password    String
+  role        String
+  createdAt   DateTime @default(now())
+}
+
+model role {
+  id        Int      @id @default(autoincrement())
+  rolename  String
+  createdAt DateTime @default(now())
 }
